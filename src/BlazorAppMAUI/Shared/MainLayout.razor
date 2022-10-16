@@ -1,0 +1,30 @@
+﻿@using AntDesign.ProLayout
+@inherits LayoutComponentBase
+
+<AntDesign.ProLayout.BasicLayout
+    MenuData="_menuData" Title="案例演示" HeaderRender="false">
+    <ChildContent>
+        @Body
+    </ChildContent>
+    <FooterRender></FooterRender>
+</AntDesign.ProLayout.BasicLayout>
+<SettingDrawer />
+
+@code
+{
+    private readonly MenuDataItem[] _menuData =
+    {
+        new MenuDataItem
+        {
+            Path = "/",
+            Name = "欢迎页",
+            Key = "welcome",
+            Icon = "smile",
+        }
+    };
+
+    public LinkItem[] Links { get; set; } =
+    {
+        
+    };
+}
